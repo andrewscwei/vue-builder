@@ -1,0 +1,21 @@
+{
+  "name": "{{ name }}",
+  "version": "0.1.0",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "private": true,
+  "license": "NOLICENSE",
+  "scripts": {
+    "start": "npm run dev",
+    "clean": "vb clean",
+    "dev": "vb dev",
+    "build": "vb build",
+    "lint": "vb lint",
+    "lint:fix": "vb lint -f",
+    "upgrade": "vb upgrade",
+    "patch": "vb patch"
+  },
+  "devDependencies": {
+    "vue-builder": "git+ssh://git@github.com/andrewscwei/vue-builder.git#v1.0.0"
+  }
+}

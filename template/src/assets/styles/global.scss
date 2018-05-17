@@ -1,0 +1,43 @@
+/**
+ * @file This is a stylesheet for global variables, mixins, placeholders and
+ *       functions only. Do not directly apply any CSS rules here because it
+ *       will yield duplicated CSS rules in the final compiled stylesheets
+ *       whenever this file is imported.
+ */
+
+/// Media query break points.
+@mixin breakpoint($point) {
+  $_small: 0px;
+  $_medium: 768px;
+  $_large: 1024px;
+  $_xlarge: 1200px;
+  $_xxlarge: 1440px;
+
+  @if $point == 'xxlarge' {
+    @media (min-width: $_xxlarge) { @content; }
+  }
+  @else if $point == 'xlarge' {
+    @media (min-width: $_xlarge) { @content; }
+  }
+  @else if $point == 'largedown' {
+    @media (max-width: $_xlarge - 1) { @content; }
+  }
+  @else if $point == 'large' {
+    @media (min-width: $_large) { @content; }
+  }
+  @else if $point == 'mediumdown' {
+    @media (max-width: $_large - 1) { @content; }
+  }
+  @else if $point == 'medium' {
+    @media (min-width: $_medium)  { @content; }
+  }
+  @else if $point == 'smalldown' {
+    @media (max-width: $_medium - 1)  { @content; }
+  }
+  @else if $point == 'small' {
+    @media (min-width: $small)  { @content; }
+  }
+  @else {
+    @error 'Unsupported breakpoint `#{$point}`';
+  }
+}

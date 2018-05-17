@@ -1,0 +1,9 @@
+{
+  "hello": "こ{num}にち{num2}, 世界！",
+  "404": "ページが表示できません",
+  "description": "このプロジェクトは<a href='https://github.com/andrewscwei/vue-builder'>vue-builder</a>で作成されました",
+  "return": "戻る",
+  "increment": "増加",
+  "increment-twice": "増加 x2",
+  "switch-lang": "English"
+}
