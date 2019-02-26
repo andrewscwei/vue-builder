@@ -33,7 +33,3 @@ Follow these steps to quickly set up a project built with `vue-builder` and depl
     4. In your project settings > **Checkout SSH keys** > **Add user key**
     5. In your project settings > **Environment Variables** > Create a variable named `NETLIFY_KEY` and set its value to the Netlify key.
 3. Trigger rebuild on CircleCI (your first build probably failed). Once complete, your site will be deployed to Netlify. From the build logs, head to step **Deploy to Netlify** and find the URL highlighted in **green** at the bottom.
-
-## License
-
-This software is released under the [MIT License](http://opensource.org/licenses/MIT).
